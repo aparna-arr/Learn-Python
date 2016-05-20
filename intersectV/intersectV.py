@@ -3,9 +3,17 @@
 import sys, getopt
 from collections import defaultdict
 
+# -a  ==========
+# -b    ==  ==
+# out ==  ==  ==
+
 def usage():
     print "usage: python intersectV.py -a <bedfile> -b <bedfile>"
     print "\nThis script acts like bedtools intersect -a -b but for -v"
+    print "-a  =========="
+    print "-b    ==  ==  "
+    print "out ==  ==  =="
+
     print "\nOutput is STDOUT"
     sys.exit()
     
@@ -121,6 +129,9 @@ def main():
             print chrom, "\t", elem["start"], "\t", elem["end"]
          
     return
+
+main()
+
 '''
 # attempt #1
     for chrom in afile_hash:
@@ -178,9 +189,3 @@ def main():
                 # b    =====
                 a_elem["end"] = b_elem["end"] - 1;
 '''                    
-                    
-
-                    
-
-
-main()
